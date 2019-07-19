@@ -1,7 +1,7 @@
 {
-  "name": "@habx/lib-client-features",
-  "version": "0.0.4",
-  "description": "Wrapper for using feature flags",
+  "name": "@habx/lib-template",
+  "version": "0.0.1",
+  "description": "Lib template",
   "main": "./dist/index.js",
   "types": "./dist/typings/index.d.ts",
   "scripts": {
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/habx/lib-client-features.git"
+    "url": "git+https://github.com/habx/lib-template.git"
   },
   "author": "Jean Dessane",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/habx/lib-client-features/issues"
+    "url": "https://github.com/habx/lib-template/issues"
   },
-  "homepage": "https://github.com/habx/lib-client-features#readme",
+  "homepage": "https://github.com/habx/lib-template#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
