@@ -59,7 +59,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.3",
     "rollup-plugin-multi-entry": "^2.1.0",
-    "rollup-plugin-typescript2": "^0.21.0",
+    "rollup-plugin-typescript2": "^0.22.1",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.3.3"
   }
