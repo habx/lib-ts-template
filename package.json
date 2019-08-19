@@ -43,7 +43,7 @@
     "@habx/eslint-config-client": "^2.0.6",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
-    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "babel-eslint": "^10.0.1",
     "bili": "^4.7.4",
