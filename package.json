@@ -6,8 +6,9 @@
   "types": "./dist/typings/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "npm run clean && bili",
-    "build:watch": "npm run clean && bili --watch",
+    "build": "npm run clean && npm run build:types && bili",
+    "build:watch": "npm run clean && npm run build:types && bili --watch",
+    "build:types": "tsc --emitDeclarationOnly",
     "postbuild": "node ./scripts/postbuild.js",
     "publish": "cd dist && npm publish && cd ..",
     "lint": "eslint \"src/**\""
@@ -34,18 +35,16 @@
     ]
   },
   "dependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react": "^16.11.0"
   },
   "devDependencies": {
-    "@habx/eslint-config-client": "^2.5.0",
-    "@types/react": "^16.9.5",
-    "@types/react-dom": "^16.9.1",
+    "@habx/eslint-config-client": "^2.6.1",
+    "@types/react": "^16.9.11",
     "bili": "^4.7.4",
-    "husky": "^3.0.2",
-    "lint-staged": "^9.2.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
     "rimraf": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.25.1",
-    "typescript": "^3.3.3"
+    "rollup-plugin-typescript2": "^0.24.3",
+    "typescript": "^3.6.4"
   }
 }
