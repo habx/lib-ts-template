@@ -31,6 +31,3 @@ update_configs:
       - match:
           dependency_name: "@sentry/*"
           update_type: "semver:minor"
-  - package_manager: "docker"
-    directory: "/"
-    update_schedule: "daily"
