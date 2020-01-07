@@ -41,7 +41,7 @@
     "@habx/eslint-config-client": "^2.6.1",
     "@types/react": "^16.9.11",
     "bili": "^4.7.4",
-    "husky": "^3.0.9",
+    "husky": "^4.0.0",
     "lint-staged": "^9.4.2",
     "rimraf": "^3.0.0",
     "rollup-plugin-typescript2": "^0.25.2",
