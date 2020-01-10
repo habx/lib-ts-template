@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/habx/lib-template.git"
   },
-  "author": "Jean Dessane",
+  "author": "HABX Front End Team",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/habx/lib-template/issues"
