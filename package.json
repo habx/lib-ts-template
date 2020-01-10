@@ -11,7 +11,8 @@
     "build:types": "tsc --emitDeclarationOnly",
     "postbuild": "node ./scripts/postbuild.js",
     "publish": "cd dist && npm publish && cd ..",
-    "lint": "eslint \"src/**\""
+    "lint": "eslint \"src/**\"",
+    "test": "echo TODO"
   },
   "repository": {
     "type": "git",
