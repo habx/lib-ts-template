@@ -34,12 +34,9 @@
       "eslint --fix"
     ]
   },
-  "dependencies": {
-    "react": "^16.11.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@habx/eslint-config-client": "^2.6.1",
-    "@types/react": "^16.9.11",
     "bili": "^4.7.4",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.1",
