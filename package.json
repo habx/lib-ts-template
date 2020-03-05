@@ -43,12 +43,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@habx/eslint-config-client": "^2.6.1",
+    "@habx/eslint-config-client": "^2.8.0",
     "bili": "^4.7.4",
-    "husky": "^4.0.0",
+    "husky": "^4.2.3",
     "lint-staged": "^10.0.1",
     "rimraf": "^3.0.0",
     "rollup-plugin-typescript2": "^0.26.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.8.3"
   }
 }
