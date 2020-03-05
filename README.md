@@ -1,1 +1,1 @@
-# Template for library creation
+# Template for typescript library creation
