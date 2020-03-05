@@ -1,18 +1,21 @@
 {
-  "name": "@habx/lib-template",
+  "name": "@habx/tslib-template",
   "version": "0.0.1",
-  "description": "Lib template",
-  "main": "./dist/index.js",
+  "description": "Typescript library template",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/esm/index.js",
   "types": "./dist/typings/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "npm run clean && npm run build:types && bili",
-    "build:watch": "npm run clean && npm run build:types && bili --watch",
-    "build:types": "tsc --emitDeclarationOnly",
-    "postbuild": "node ./scripts/postbuild.js",
-    "publish": "cd dist && npm publish && cd ..",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "bili",
+    "build:watch": "npm run clean && tsc --watch",
+    "generate:snapshots": "node ./scripts/generateSnapshot.js",
     "lint": "eslint \"src/**\"",
-    "test": "echo TODO"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "type:coverage": "tscov"
   },
   "repository": {
     "type": "git",

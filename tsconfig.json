@@ -1,18 +1,28 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "rootDirs": ["./src"],
-    "outDir": "./dist",
+    "outDir": "./dist/esm",
     "declarationDir": "./dist/typings",
-    "lib": ["es7", "dom"],
-    "moduleResolution": "node",
+    "baseUrl": "typings",
+    "target": "ES5",
+    "module": "ES2015",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "DOM"],
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "strict": true,
     "removeComments": true,
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "target": "esnext",
-    "module": "commonjs",
-    "esModuleInterop": true
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   },
-  "files": ["./src/index.ts"]
+  "include": ["./src/**/*"],
+  "exclude": ["./src/**/*.spec.ts"],
+  "typedocOptions": {
+    "mode": "file",
+    "out": "docs"
+  }
 }
