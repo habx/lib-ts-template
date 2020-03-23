@@ -43,7 +43,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@habx/eslint-config-client": "^2.8.0",
+    "@habx/eslint-config-client": "^3.0.0",
     "bili": "^4.7.4",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.1",
