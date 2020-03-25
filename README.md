@@ -1,5 +1,5 @@
 # Template for typescript library creation
 
-- Output both esm and commonJS formats
-- Three shaking
-- Typescript support
+- Output both ESM and CommonJS formats
+- Tree shaking
+- TypeScript support
