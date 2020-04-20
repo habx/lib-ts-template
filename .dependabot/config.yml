@@ -10,28 +10,25 @@ update_configs:
           dependency_type: "development"
           update_type: "all"
       - match:
-          # APP-10653: Updating from semver:patch to semver:minor
-          # update_type: "semver:patch"
           dependency_type: "production"
-          update_type: "semver:minor"
-# APP-10653: These are becoming redundant:
-#      - match:
-#          dependency_name: "@habx/*"
-#          update_type: "semver:minor"
-#      - match:
-#          dependency_name: "@sentry/*"
-#          update_type: "semver:minor"
-#      - match:
-#          dependency_name: "@habx/*"
-#          update_type: "in_range"
-#      - match:
-#          dependency_type: "production"
-#          update_type: "in_range"
+          update_type: "semver:patch"
+      - match:
+          dependency_type: "production"
+          update_type: "in_range"
       - match:
           dependency_name: "lodash"
       - match:
           dependency_name: "@types/*"
       - match:
+          dependency_name: "@habx/*"
+          update_type: "in_range"
+      - match:
+          dependency_name: "@habx/*"
+          update_type: "semver:minor"
+      - match:
           dependency_name: "lint-staged"
       - match:
           dependency_name: "typescript"
+      - match:
+          dependency_name: "@sentry/*"
+          update_type: "semver:minor"
