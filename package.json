@@ -44,7 +44,7 @@
   "dependencies": {},
   "devDependencies": {
     "@habx/eslint-config-client": "^3.0.1",
-    "bili": "^4.7.4",
+    "bili": "^5.0.2",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.1",
     "rimraf": "^3.0.0",
