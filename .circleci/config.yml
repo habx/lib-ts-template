@@ -7,10 +7,10 @@ version: 2.1
 # --- Anchor alias ---- #
 # - Docker configuration - #
 alias:
-  # https://circleci.com/docs/2.0/circleci-images/#nodejs
-  - &docker_node12_configuration
+# https://circleci.com/docs/2.0/circleci-images/#nodejs
+  - &docker_node14_configuration
     docker:
-      - image: circleci/node:12.0.0
+      - image: circleci/node:14.0.0
         user: root
   - &docker_buildpack_deps_configuration
     docker:
@@ -20,7 +20,7 @@ alias:
     docker:
       - image: circleci/python
         user: root
-  # - Jobs filters - #
+# - Jobs filters - #
   - &filters_ignore_tags
     tags:
       ignore: /.*/
@@ -34,21 +34,27 @@ alias:
     branches:
       only:
         - dev
-  # - Step - #
+# - Step - #
   - &preconfig
     run:
       name: Preconfigure environment ~/.npmrc
       command: |
+        echo "@${GITHUB_PKG_NPM_ORG}:registry=https://npm.pkg.github.com/" > ~/.npmrc
+        echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> ~/.npmrc
+  - &preconfig-deprecated
+    run:
+      name: Preconfigure environment ~/.npmrc (deprecated)
+      command: |
         echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-  # - Node modules - #
+# - Node modules - #
   - &install_node_modules_with_cache
     node/with-cache:
-      dir: node_modules
-      cache-version: dev{{ .Environment.CACHE_VERSION }}
-      steps:
-        - run:
-            name: Install node module
-            command: npm install
+        dir: node_modules
+        cache-version: dev{{ .Environment.CACHE_VERSION }}
+        steps:
+          - run:
+              name: Install node module
+              command: npm install
   - &install_node_modules_with_cache_production
     node/with-cache:
       dir: node_modules
@@ -65,10 +71,10 @@ alias:
         - run: echo
 jobs:
   build:
-    <<: *docker_node12_configuration
+    <<: *docker_node14_configuration
     steps:
       - checkout
-      - *preconfig
+      - *preconfig-deprecated
       - *install_node_modules_with_cache_production
       - *install_node_modules_with_cache
       - run: export NODE_ENV=production; npm run build
@@ -78,19 +84,19 @@ jobs:
             - dist
 
   storybook-build:
-    <<: *docker_node12_configuration
+    <<: *docker_node14_configuration
     steps:
       - checkout
-      - *preconfig
+      - *preconfig-deprecated
       - *install_node_modules_with_cache
       - attach_workspace:
           at: ~/project
-      - *preconfig
+      - *preconfig-deprecated
       - *install_node_modules_with_cache
       - run: npm run storybook:build
 
   lint:
-    <<: *docker_node12_configuration
+    <<: *docker_node14_configuration
     steps:
       - checkout
       - *preconfig
@@ -98,47 +104,36 @@ jobs:
       - run: npm run lint
 
   tests:
-    <<: *docker_node12_configuration
+    <<: *docker_node14_configuration
     steps:
       - checkout
       - *preconfig
       - *install_node_modules_with_cache
       - run: npm run test
-  tests-puppeteer:
-    docker:
-      - image: jean9696/drone-puppeteer
-    parallelism: 1
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/project
-      - *preconfig
-      - *install_node_modules_with_cache
-      - run:
-          name: Puppeteer test
-          command: |
-            apt-get -yq update
-            apt-get -y install nginx
-            sed -i 's/root.*/root \/root\/project\/build-test\/;/' /etc/nginx/sites-enabled/default
-            nginx -c /etc/nginx/nginx.conf
-            chmod -R a+rx /root/
-            npm run test
-    environment:
-      HABX_ROLE: admin
-      LOCAL_URL: http://localhost
 
   npm-publish:
-    <<: *docker_node12_configuration
+    <<: *docker_node14_configuration
     steps:
       - checkout
       - attach_workspace:
           at: ~/project
       - *preconfig
       - *install_node_modules_with_cache
+      - run: npm publish
+
+  npm-deprecated-publish:
+    <<: *docker_node14_configuration
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - *preconfig-deprecated
+      - *install_node_modules_with_cache
+      - run: jq -M 'del(.publishConfig)' package.json > _package.json; mv _package.json package.json
       - run: NPM_TOKEN=${NPM_TOKEN_RW} npm publish
 
   storybook-publish:
-    <<: *docker_node12_configuration
+    <<: *docker_node14_configuration
     steps:
       - checkout
       - attach_workspace:
@@ -169,6 +164,13 @@ workflows:
           requires:
             - build
             - lint
+          filters:
+            <<: *filters_allow_tags
+            <<: *filters_ignore_branches
+      - npm-deprecated-publish:
+          context: default_env_vars
+          requires:
+            - tests
           filters:
             <<: *filters_allow_tags
             <<: *filters_ignore_branches
