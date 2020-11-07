@@ -9,8 +9,8 @@
   "npmrc": "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}\n@habx:registry=https://npm.pkg.github.com/habx",
   "masterIssue": true,
   "rangeStrategy": "bump",
-  "prConcurrentLimit": 3,
-  "prHourlyLimit": 5,
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 1,
   "enabledManagers": [
     "npm"
   ],
@@ -22,8 +22,7 @@
         "patch"
       ],
       "depTypeList": [
-        "dependencies",
-        "peerDependencies"
+        "devDependencies"
       ],
       "automerge": true,
       "labels": [
@@ -32,6 +31,7 @@
     },
     {
       "updateTypes": [
+        "minor",
         "patch"
       ],
       "depTypeList": [
