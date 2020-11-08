@@ -10,7 +10,7 @@
   "masterIssue": true,
   "rangeStrategy": "bump",
   "prConcurrentLimit": 1,
-  "prHourlyLimit": 1,
+  "prHourlyLimit": 10,
   "enabledManagers": [
     "npm"
   ],
