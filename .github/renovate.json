@@ -19,8 +19,13 @@
     "after 10pm and before 6:00am"
   ],
   "vulnerabilityAlerts": {
-    "labels": ["security"],
-    "schedule": ["at any time"]
+    "labels": [
+      "security"
+    ],
+    "schedule": [
+      "at any time"
+    ],
+    "prPriority": 10
   },
   "packageRules": [
     {
@@ -64,7 +69,9 @@
       "labels": [
         "habx-automerge"
       ],
-      "schedule": ["at any time"]
+      "schedule": [
+        "at any time"
+      ]
     },
     {
       "packageNames": [
