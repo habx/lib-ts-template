@@ -151,3 +151,11 @@ workflows:
           filters:
             <<: *filters_allow_tags
             <<: *filters_ignore_branches
+      - tsdoc-publish:
+          context: default_env_vars
+          requires:
+            - build
+            - lint
+          filters:
+            <<: *filters_allow_tags
+            <<: *filters_ignore_branches
