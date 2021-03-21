@@ -46,7 +46,7 @@
     "@habx/config-ci-front": "^0.7.0",
     "@habx/eslint-config-client": "^6.0.0",
     "bili": "^5.0.5",
-    "husky": "^5.1.3",
+    "husky": "^5.2.0",
     "lint-staged": "^10.5.4",
     "rimraf": "^3.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
