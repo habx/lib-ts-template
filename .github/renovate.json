@@ -39,7 +39,6 @@
   "packageRules": [
     {
       "updateTypes": [
-        "major",
         "minor",
         "patch"
       ],
