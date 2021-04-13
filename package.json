@@ -43,7 +43,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@habx/config-ci-front": "^0.7.0",
+    "@habx/config-ci-front": "^0.8.0",
     "@habx/eslint-config-client": "^6.0.0",
     "bili": "^5.0.5",
     "husky": "^5.2.0",
