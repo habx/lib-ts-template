@@ -48,7 +48,7 @@
       ],
       "automerge": true,
       "labels": [
-        "habx-automerge",
+        "automerge",
         "dependencies"
       ]
     },
@@ -63,7 +63,7 @@
       ],
       "automerge": true,
       "labels": [
-        "habx-automerge",
+        "automerge",
         "dependencies"
       ]
     },
@@ -86,7 +86,6 @@
       ],
       "automerge": true,
       "labels": [
-        "habx-automerge",
         "automerge",
         "dependencies"
       ]
@@ -113,7 +112,7 @@
       "automerge": true,
       "prPriority": -5,
       "labels": [
-        "habx-automerge",
+        "automerge",
         "dependencies"
       ]
     },
@@ -130,7 +129,7 @@
       "automerge": true,
       "prPriority": -10,
       "labels": [
-        "habx-automerge",
+        "automerge",
         "dependencies"
       ]
     },
