@@ -136,11 +136,19 @@
     {
       "packageNames": [
         "three",
+        "@types/three",
         "react-scripts"
       ],
       "automerge": false,
       "stabilityDays": 7,
       "labels": []
+    },
+    {
+      "packageNames": [
+        "three",
+        "@types/three"
+      ],
+      "groupName": "three"
     }
   ]
 }
