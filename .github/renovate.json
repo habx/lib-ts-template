@@ -48,7 +48,7 @@
       ],
       "automerge": true,
       "labels": [
-        "automerge",
+        "automerge-noupdate",
         "dependencies"
       ]
     },
@@ -63,7 +63,7 @@
       ],
       "automerge": true,
       "labels": [
-        "automerge",
+        "automerge-noupdate",
         "dependencies"
       ]
     },
@@ -86,7 +86,7 @@
       ],
       "automerge": true,
       "labels": [
-        "automerge",
+        "automerge-noupdate",
         "dependencies"
       ]
     },
@@ -112,7 +112,7 @@
       "automerge": true,
       "prPriority": -5,
       "labels": [
-        "automerge",
+        "automerge-noupdate",
         "dependencies"
       ]
     },
@@ -129,7 +129,7 @@
       "automerge": true,
       "prPriority": -10,
       "labels": [
-        "automerge",
+        "automerge-noupdate",
         "dependencies"
       ]
     },
@@ -142,13 +142,6 @@
       "automerge": false,
       "stabilityDays": 7,
       "labels": []
-    },
-    {
-      "packageNames": [
-        "three",
-        "@types/three"
-      ],
-      "groupName": "three"
     }
   ]
 }
