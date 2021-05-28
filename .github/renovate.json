@@ -99,6 +99,13 @@
     },
     {
       "packageNames": [
+        "ts-jest",
+        "jest"
+      ],
+      "groupName": "jest"
+    },
+    {
+      "packageNames": [
         "knex",
         "lodash",
         "typescript",
