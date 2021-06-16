@@ -51,7 +51,7 @@
     "rimraf": "^3.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "typedoc": "^0.20.36",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.3"
   },
   "publishConfig": "https://npm.pkg.github.com/"
 }
