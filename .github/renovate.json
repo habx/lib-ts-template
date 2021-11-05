@@ -4,7 +4,7 @@
     "config:base"
   ],
   "encrypted": {
-    "npmToken": "ZGTuTXf1p5UE2/GLJZDA7K+CaWqaYU1E6szBC2IhR3/IGscIM3987vTD6cwqJs1ZA0eAl4jt1t7rocRC6y53gD/qMI8b3jUSegKd71Jau6yjj0U9DJTn7n39C6MtM103Zb6pk4I1RVV63fts2GnjtAUmQHnlweV3T5S+ZiEW+uIfJVL1A8mL5diVcdIntDf4vLAKuZVId8pk64ZCC9/EI/dexLymA+jyUO3FFnoA5jLsBvP+l7bWgxSyPqFcy64hCHGXLZyNJAI28THEG15zPBpNYxlB2wGARli7R5FDhi9hrvCr3PeMgKxmjYkKykBT5kbThB74lrEdEWyqiD2qCA=="
+    "npmToken": "wcFMA/xDdHCJBTolAQ//ZZTN0kodaQoh2xXc2yLcRppOPuXXonJ1EsfJYcM0YnxcI3OpiSZYIeckKO4cind3+cfQ0/k0xFXawnt+D8H47Xi8Q/y+JO95iRYqDinbdsCE4nLBmqXAX0C+66z7OaxhBf5Dy2qAXLB4zwQuD2EqlDRcjCWjoyBnzDBhO1YuQb7AyHRgs7KMpXnyfIYdVlAyy5JkF3C4J4akqTLeLaOnPKx6ie39iQrmCwK/66/NIzF0fGtAIFlVWrWHjWkHjhe57t4huemhLvCVgwWORcSHUsw8vd3KVKLDAgic1IituncjMA8jcqls+s7tZoi0qxLiZGdUW/lx9m4dM7IseD08AyoZ2FGmS2lCe4vbUFJv8dSw4vx32NvTcyNnG+DRiSMehIKwO4CdWwysalPMKR3F3frspCmBRVdELv1sMEf07O4+G8+dRfN/oO0gGS0MrLhclYLRqckUwirryINl35/GOtB5fyR+OOrRd3QsM+HNi7/8x4n9v761efU1CHApFc8ix2DwOa39wuOcRuWLv/h/RMR1MKsu0cT5atJ9XFS9qawJl0OQYMzXLYEUvi2q3WTx6842ha4te96IwTR7VpWmR8kTFkQPHN3RA4oL+GGm/86Xx8PV7Hd7CbKXP9lC571e/5jdnquliXWXBqI3ae7/eHqg5n07P47927AHuj54bTDScwHaglbXPzIZdDyCT72AGraNAZL4ITJmT+66+M6UVYpmnP3ZkN5zUANe660427KBmjo5BeeFSKXRsMBOd+xwPlW0ovb6YrzshFzFaNWKbfypTYRHbb0+thLkcIWY4/SIg8euip7Nn7q/fW0MJf5/Z++4+n0"
   },
   "npmrc": "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}\n@habx:registry=https://npm.pkg.github.com/habx\nlegacy-peer-deps=true",
   "force": {
