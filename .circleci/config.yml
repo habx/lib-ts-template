@@ -31,42 +31,21 @@ workflows:
   tests:
     jobs:
       - node/lint:
-          context: default_env_vars
           filters:
             <<: *filters_only_branch
-      # - node/tests-without-postgres:
-      #     context: default_env_vars
-      #     filters:
-      #       <<: *filters_only_branch
       - node/build:
-          context: default_env_vars
           filters:
             <<: *filters_only_branch
   dev:
     jobs:
       - node/lint:
-          context: default_env_vars
           filters:
             <<: *filters_only_dev
       - node/build:
-          context: default_env_vars
           filters:
             <<: *filters_only_dev
   release:
     jobs:
       - node/build:
-          context: default_env_vars
-          filters:
-            <<: *filters_only_tags
-      - node/npm-publish-tsdoc:
-          context: default_env_vars
-          requires:
-            - node/build
-          filters:
-            <<: *filters_only_tags
-      - node/npm-publish:
-          context: default_env_vars
-          requires:
-            - node/build
           filters:
             <<: *filters_only_tags
