@@ -9,6 +9,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build-ci": "npm run build",
     "build:esm": "tsc",
     "build:cjs": "bili",
     "build:watch": "npm run clean && tsc --watch",
