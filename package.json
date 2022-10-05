@@ -1,6 +1,6 @@
 {
   "name": "@habx/tslib-template",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Typescript library template",
   "main": "./dist/index.cjs.js",
   "module": "./dist/esm/index.js",
