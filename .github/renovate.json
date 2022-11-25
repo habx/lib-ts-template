@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "2022-03-17",
   "extends": [
-    "github>habx/devops-repo-shared-configs//renovate/ts-lib-service"
+    "github>habx/devops-repo-shared-configs//renovate/ts-lib-service-non-esm"
   ]
 }
